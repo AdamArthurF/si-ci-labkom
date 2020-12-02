@@ -1,8 +1,7 @@
 <?php
 
-class C_User extends CI_Controller {
+class Home extends CI_Controller {
 
-    //index untuk menampilkan data dan menampilkan layout
     public function index(){
 
         $this->load->view('User/Layouts/header');
@@ -21,7 +20,7 @@ class C_User extends CI_Controller {
         $this->load->view('User/Layouts/footer');  
     }
 
-    public function kontak(){
+    public function contact(){
 
         $this->load->view('User/Layouts/header');
         $this->load->view('User/Layouts/navbar');
@@ -29,7 +28,7 @@ class C_User extends CI_Controller {
         $this->load->view('User/Layouts/footer');  
     }
 
-    public function tentang(){
+    public function about(){
 
         $this->load->view('User/Layouts/header');
         $this->load->view('User/Layouts/navbar');
