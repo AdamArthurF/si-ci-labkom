@@ -21,10 +21,7 @@
 			<i class="fa fa-plus"></i>
 			Tambah Data Lab
 		</button>
-		<div class="mb-3">
-
-		</div>
-		<table class="table">
+		<table class="table mt-3">
 			<tr>
 				<th>No</th>
 				<th>Nama Lab</th>
@@ -57,14 +54,14 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form method="post" action="<?= base_url() . 'Admin/Lab/insert_entry' ?>">
+					<?= form_open(base_url() . 'Admin/Lab/insert') ?>
 						<div class="form-group">
 							<label for="nama_lab"> Nama Lab</label>
-							<input type="text" id="nama_lab" name="nama_lab" class="form-control">
+							<?= form_input('nama_lab', '', 'id="nama_lab" class="form-control"') ?>
 						</div>
 						<button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
-						<button type="submit" class="btn btn-primary">Tambah Data</button>
-					</form>
+						<?= form_submit('', 'Tambah Data', 'class="btn btn-primary"') ?>
+					<?= form_close() ?>
 				</div>
 			</div>
 		</div>

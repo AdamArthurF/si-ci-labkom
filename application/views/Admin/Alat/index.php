@@ -22,10 +22,7 @@
       	<button class="btn btn-primary" data-toggle="modal" data-target="#alatModal">
         	<i class="fa fa-plus"></i>Tambah Data Alat
       	</button>
-      	<div class="mb-3">
-
-		</div>
-      	<table class="table" >
+      	<table class="table mt-3" >
 		  	<thead>
 			  	<tr>
 				  	<th>No</th>
@@ -72,18 +69,18 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form method="post" action="<?= base_url().'Admin/Alat/insert' ?>">
+					<?= form_open(base_url() . 'Admin/Alat/insert') ?>
 						<div class="form-group">
 							<label for="nama_alat">Nama Alat</label>
-							<input type="text" id="nama_alat" name="nama_alat" class="form-control">
+							<?= form_input('nama_alat', '', 'id="nama_alat" class="form-control"') ?>
 						</div>
 						<div class="form-group">
 							<label for="harga">Harga</label>
-							<input type="text" id="harga" name="harga" class="form-control">
+							<?= form_input('harga', '', 'id="harga" class="form-control"') ?>
 						</div>
 						<button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
-						<button type="submit" class="btn btn-primary">Tambah Data</button>
-					</form>
+						<?= form_submit('', 'Tambah', 'class="btn btn-primary"') ?>
+					<?= form_close() ?>
 				</div>
   			</div>
 		</div>

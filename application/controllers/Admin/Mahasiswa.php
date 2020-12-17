@@ -81,17 +81,7 @@ class Mahasiswa extends CI_Controller {
         redirect('Admin/Mahasiswa/index');
     }
 
-	/**
-	 * @param string $nim
-	 * @return void
-	 */
-	public function delete(string $nim): void
-	{
-        $this->Mahasiswa->delete(['nim' => $nim],'mahasiswa');
-        redirect('Admin/Mahasiswa/index');
-    }
-
-	/**
+    /**
 	 * @param string $nim
 	 * @return void
 	 */
@@ -120,6 +110,16 @@ class Mahasiswa extends CI_Controller {
 			'email' => $this->input->post('email')]);
         redirect('Admin/Mahasiswa/index');
     }
+
+	/**
+	 * @param string $nim
+	 * @return void
+	 */
+	public function delete(string $nim): void
+	{
+		$this->Mahasiswa->delete(['nim' => $nim],'mahasiswa');
+		redirect('Admin/Mahasiswa/index');
+	}
 
 	/**
 	 * @return void

@@ -16,7 +16,7 @@
     <!-- /.content-header -->
 
     <section class="content">
-      	<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      	<button class="btn btn-primary" data-toggle="modal" data-target="#mahasiswaModal">
         	<i class="fa fa-plus"></i>
         	Tambah Data Mahasiswa
 		</button>
@@ -66,7 +66,7 @@
     </section>
 
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="mahasiswaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  	<div class="modal-dialog">
 			<div class="modal-content">
 		  		<div class="modal-header">
@@ -80,8 +80,8 @@
 					<a href="<?= base_url() . 'Admin/Mahasiswa/download' ?>">Download Template File Excel</a>
 					<?= form_open_multipart('Admin/Mahasiswa/upload') ?>
 						<div class="form-group">
-							<input type='file' name='file' size='20'>
-							<input type='submit' name='submit' value='upload' class='btn btn-primary'>
+							<?= form_upload('file', 'size="20"') ?>
+							<?= form_submit('submit', 'Upload', 'class="btn btn-primary"') ?>
 						</div>
 					<?= form_close() ?>
 					<h4 class="bg-warning text-center mt-3 mb-3">Atau</h4>
@@ -127,7 +127,7 @@
 							<label for="email"> Email</label>
 							<?= form_input('email', '', 'id="email" class="form-control"') ?>
 						</div>
-						<?= form_reset('', 'Reset', 'class="btn btn-danger" data-dismiss="modal"') ?>
+						<button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
 						<?= form_submit('', 'Tambah', 'class="btn btn-primary"') ?>
 					<?= form_close() ?>
 				</div>

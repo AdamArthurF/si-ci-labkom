@@ -30,8 +30,7 @@ class Mahasiswa extends CI_Model {
 	 */
 	public function delete(array $where): void
 	{
-        $this->db->where($where);
-        $this->db->delete($this->table);
+        $this->db->delete($this->table, $where);
     }
 
 	/**

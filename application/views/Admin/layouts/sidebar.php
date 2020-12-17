@@ -46,14 +46,14 @@
 			</li>
 			<li class="nav-item bg-blue">
 			 	<a href="<?= base_url()?>Admin/SuratBebas" class="nav-link" >
-			  	<i class="nav-icon fa fa-file"></i>
-			   	<p>Surat Bebas Labkom</p>
+                    <i class="nav-icon fa fa-file"></i>
+                    <p>Surat Bebas Labkom</p>
 			 	</a>
 			</li>
 			<li class="nav-item bg-blue">
 			 	<a href="<?= base_url()?>Admin/Login/logout" class="nav-link" >
-			 	<i class="nav-icon fas fa-sign-out-alt"></i>
-			  	<p>Log Out</p>
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                    <p>Log Out</p>
 			 	</a>
 			</li>
         </ul>

@@ -2,39 +2,48 @@
 
 class Home extends CI_Controller {
 
-    public function index(){
-
-        $this->load->view('User/Layouts/header');
-        $this->load->view('User/Layouts/navbar');
-        $this->load->view('User/Layouts/cover');
-        $this->load->view('User/Layouts/footer');  
+    /**
+     * @return void
+     */
+    public function index(): void
+    {
+        $this->load->view('User/layouts/header');
+        $this->load->view('User/layouts/navbar');
+        $this->load->view('User/layouts/cover');
+        $this->load->view('User/layouts/footer');
     }
 
-
-
-    public function services(){
-
-        $this->load->view('User/Layouts/header');
-        $this->load->view('User/Layouts/navbar');
+    /**
+     * @return void
+     */
+    public function services(): void
+    {
+        $this->load->view('User/layouts/header');
+        $this->load->view('User/layouts/navbar');
         $this->load->view('User/Services/services');
-        $this->load->view('User/Layouts/footer');  
+        $this->load->view('User/layouts/footer');
     }
 
-    public function contact(){
+    /**
+     * @return void
+     */
+    protected function contact(): void
+    {
 
-        $this->load->view('User/Layouts/header');
-        $this->load->view('User/Layouts/navbar');
+        $this->load->view('User/layouts/header');
+        $this->load->view('User/layouts/navbar');
         $this->load->view('User/Kontak/kontak');
-        $this->load->view('User/Layouts/footer');  
+        $this->load->view('User/layouts/footer');
     }
 
-    public function about(){
-
-        $this->load->view('User/Layouts/header');
-        $this->load->view('User/Layouts/navbar');
+    /**
+     * @return void
+     */
+    public function about(): void
+    {
+        $this->load->view('User/layouts/header');
+        $this->load->view('User/layouts/navbar');
         $this->load->view('User/Tentang/tentang');
-        $this->load->view('User/Layouts/footer');  
+        $this->load->view('User/layouts/footer');
     }
-    
-
 }
